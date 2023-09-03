@@ -60,14 +60,14 @@ fun FeedPost(
         .clickable {
             onClick()
         }
-        .padding(vertical = 15.dp, horizontal = 15.dp)) {
+        .padding(vertical = 10.dp, horizontal = 15.dp)) {
         Row(
             verticalAlignment = Alignment.Top,
             horizontalArrangement = Arrangement.Start
         ) {
             Card(
                 modifier = Modifier
-                    .size(60.dp)
+                    .size(50.dp)
                     .clip(shape = RoundedCornerShape(corner = CornerSize(50)))
             ) {
                 AsyncImage(
@@ -80,13 +80,13 @@ fun FeedPost(
             Column {
                 Text(
                     text = feed.account.name,
-                    fontSize = 20.sp,
+                    fontSize = 18.sp,
                     fontWeight = FontWeight.SemiBold
                 )
                 Spacer(modifier = Modifier.height(5.dp))
                 Text(
                     text = "2 hours ago",
-                    fontSize = 15.sp,
+                    fontSize = 13.sp,
                     fontWeight = FontWeight.Normal,
                     color = MaterialTheme.colorScheme.inverseSurface.copy(alpha = 0.8F)
                 )
@@ -120,7 +120,7 @@ fun FeedPost(
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = feed.feedText, fontSize = 18.sp)
+        Text(text = feed.feedText, fontSize = 16.sp)
 
         Spacer(modifier = Modifier.height(20.dp))
 
@@ -184,12 +184,12 @@ fun FeedPost(
                             id = R.drawable.like
                         ),
                         contentDescription = "icon-likes",
-                        modifier = Modifier.size(25.dp),
-                        tint = if (feed.likes % 2 == 0) MaterialTheme.colorScheme.primary else Color.Black
+                        modifier = Modifier.size(20.dp),
+                        tint = if (feed.likes % 2 == 0) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onBackground
                     )
                 }
 
-                Text(text = feed.likes.toString(), fontSize = 14.sp)
+                Text(text = feed.likes.toString(), fontSize = 15.sp)
             }
 
             Row(
@@ -200,11 +200,11 @@ fun FeedPost(
                     Icon(
                         painter = painterResource(id = R.drawable.comment),
                         contentDescription = "icon-comments",
-                        modifier = Modifier.size(25.dp)
+                        modifier = Modifier.size(20.dp)
                     )
                 }
 
-                Text(text = feed.comCount.toString(), fontSize = 14.sp)
+                Text(text = feed.comCount.toString(), fontSize = 15.sp)
             }
 
             Row(
@@ -215,11 +215,11 @@ fun FeedPost(
                     Icon(
                         painter = painterResource(id = R.drawable.share),
                         contentDescription = "icon-send",
-                        modifier = Modifier.size(25.dp)
+                        modifier = Modifier.size(20.dp)
                     )
                 }
 
-                Text(text = "Share", fontSize = 14.sp)
+                Text(text = "Share", fontSize = 15.sp)
             }
         }
 

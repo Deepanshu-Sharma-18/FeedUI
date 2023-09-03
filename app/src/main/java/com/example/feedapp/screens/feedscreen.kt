@@ -97,7 +97,7 @@ fun FeedScreen(navController: NavController, viewModel: FeedViewModel) {
                             Modifier
                                 .tabIndicatorOffset(it[active.value])
                                 .padding(top = 40.dp, start = 20.dp, end = 20.dp),
-                            height = 5.dp,
+                            height = 3.dp,
                             color = MaterialTheme.colorScheme.primary
 
                         )
@@ -107,12 +107,12 @@ fun FeedScreen(navController: NavController, viewModel: FeedViewModel) {
                 ) {
                     tabs.forEachIndexed() { index, s ->
                         Tab(
-                            modifier = Modifier.height(80.dp),
+                            modifier = Modifier.height(60.dp),
                             selected = active.value == index,
                             onClick = { if (active.value != index) active.value = index }) {
                             Text(
                                 text = s,
-                                fontSize = 20.sp,
+                                fontSize = 16.sp,
                                 color = if (active.value == index) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.inverseSurface.copy(
                                     alpha = 0.8F
                                 ),
@@ -140,7 +140,7 @@ fun FeedScreen(navController: NavController, viewModel: FeedViewModel) {
                             .background(color = MaterialTheme.colorScheme.background)
 
                     ) {
-                        Spacer(modifier = Modifier.height(80.dp))
+                        Spacer(modifier = Modifier.height(70.dp))
                         FeedList(feedData = feedData, navController = navController)
                     }
                 }

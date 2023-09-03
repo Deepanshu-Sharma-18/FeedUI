@@ -49,7 +49,7 @@ fun CommentPost(comment: Comment) {
 
                 Card(
                     modifier = Modifier
-                        .size(60.dp)
+                        .size(50.dp)
                         .clip(shape = RoundedCornerShape(corner = CornerSize(50)))
                 ) {
                     AsyncImage(
@@ -62,13 +62,13 @@ fun CommentPost(comment: Comment) {
                 Column {
                     Text(
                         text = comment.account.name,
-                        fontSize = 20.sp,
+                        fontSize = 18.sp,
                         fontWeight = FontWeight.SemiBold
                     )
                     Spacer(modifier = Modifier.height(5.dp))
                     Text(
                         text = "2 hours ago",
-                        fontSize = 15.sp,
+                        fontSize = 14.sp,
                         fontWeight = FontWeight.Normal,
                         color = MaterialTheme.colorScheme.inverseSurface.copy(alpha = 0.8F)
                     )
@@ -84,7 +84,7 @@ fun CommentPost(comment: Comment) {
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = comment.feedText, fontSize = 18.sp)
+        Text(text = comment.feedText, fontSize = 16.sp)
 
         Spacer(modifier = Modifier.height(20.dp))
 
