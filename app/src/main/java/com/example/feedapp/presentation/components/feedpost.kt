@@ -1,4 +1,4 @@
-package com.example.feedapp.utils.components
+package com.example.feedapp.presentation.components
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -27,22 +27,17 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.compose.SubcomposeAsyncImage
 import com.example.feedapp.R
-import com.example.feedapp.models.Feed
-import com.example.feedapp.utils.navigation.Screens
+import com.example.feedapp.data.models.Feed
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -60,7 +55,7 @@ fun FeedPost(
         .clickable {
             onClick()
         }
-        .padding(vertical = 10.dp, horizontal = 15.dp)) {
+        .padding(vertical = 13.dp, horizontal = 15.dp)) {
         Row(
             verticalAlignment = Alignment.Top,
             horizontalArrangement = Arrangement.Start
@@ -135,7 +130,10 @@ fun FeedPost(
                         .fillMaxWidth()
                         .height(200.dp),
                     loading = {
-                        CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
+                        CircularProgressIndicator(
+                            color = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.size(10.dp)
+                        )
                     }
                 )
             }

@@ -1,18 +1,15 @@
-package com.example.feedapp.screens
+package com.example.feedapp.presentation.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -22,10 +19,10 @@ import androidx.paging.LoadState
 import androidx.paging.PagingData
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.example.feedapp.models.Feed
-import com.example.feedapp.utils.components.FeedPost
-import com.example.feedapp.utils.components.Line
-import com.example.feedapp.utils.navigation.Screens
+import com.example.feedapp.data.models.Feed
+import com.example.feedapp.presentation.components.FeedPost
+import com.example.feedapp.presentation.components.Line
+import com.example.feedapp.navigation.Screens
 import kotlinx.coroutines.flow.Flow
 
 @Composable

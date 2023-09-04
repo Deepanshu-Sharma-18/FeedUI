@@ -1,4 +1,4 @@
-package com.example.feedapp.utils.navigation
+package com.example.feedapp.navigation
 
 enum class Screens {
     FeedScreen,

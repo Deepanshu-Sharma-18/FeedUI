@@ -1,4 +1,4 @@
-package com.example.feedapp.utils.components
+package com.example.feedapp.presentation.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -31,8 +31,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.example.feedapp.R
-import com.example.feedapp.models.Comment
-import com.example.feedapp.models.Feed
+import com.example.feedapp.data.models.Comment
+import com.example.feedapp.data.models.Feed
 
 @Composable
 fun CommentPost(comment: Comment) {

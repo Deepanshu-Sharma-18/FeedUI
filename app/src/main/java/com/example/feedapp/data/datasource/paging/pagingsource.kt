@@ -1,8 +1,8 @@
-package com.example.feedapp.utils.paging
+package com.example.feedapp.data.datasource.paging
 
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.feedapp.models.Feed
+import com.example.feedapp.data.models.Feed
 
 
 class FeedPagingSource(private val initialData: List<Feed>) : PagingSource<Int, Feed>() {

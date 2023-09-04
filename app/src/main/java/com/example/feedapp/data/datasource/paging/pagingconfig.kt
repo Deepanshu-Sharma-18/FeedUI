@@ -1,4 +1,4 @@
-package com.example.feedapp.utils.paging
+package com.example.feedapp.data.datasource.paging
 
 import androidx.paging.PagingConfig
 

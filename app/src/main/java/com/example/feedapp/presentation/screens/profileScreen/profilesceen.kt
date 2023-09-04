@@ -1,4 +1,4 @@
-package com.example.feedapp.screens
+package com.example.feedapp.presentation.screens.profileScreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -11,14 +11,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 
 @Composable
-fun BazaarSceen() {
+fun ProfileSceen() {
     Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            Text(text = "Bazzar Screen")
+            Text(text = "Profile Sceen")
         }
     }
 }

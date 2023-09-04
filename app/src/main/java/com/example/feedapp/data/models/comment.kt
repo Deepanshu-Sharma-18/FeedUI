@@ -1,4 +1,4 @@
-package com.example.feedapp.models
+package com.example.feedapp.data.models
 
 data class Comment(
     val account: Account,

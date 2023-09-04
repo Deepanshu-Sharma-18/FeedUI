@@ -1,4 +1,4 @@
-package com.example.feedapp.utils.components
+package com.example.feedapp.presentation.components
 
 import android.net.Uri
 import android.util.Log
